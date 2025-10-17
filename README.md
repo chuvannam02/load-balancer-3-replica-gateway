@@ -32,6 +32,31 @@ Client (Browser / API Consumer)
 
   └───────────────────────┘
 ```
+> 💡 Gợi ý:  
+Nếu bạn muốn hiển thị trực quan hơn (với mũi tên và box rõ nét) khi render trong Markdown viewer hỗ trợ Mermaid, bạn có thể dùng **Mermaid diagram** như sau:
+
+```markdown
+```mermaid
+flowchart TD
+    A[Client (Browser / API Consumer)]
+    B[Reverse Proxy / Ingress<br/>(Nginx / Traefik / HAProxy)]
+    C[K8s Service: spring-gateway<br/>(ClusterIP, load-balance giữa các pod)]
+    D1[Pod 1: spring-gateway]
+    D2[Pod 2: spring-gateway]
+    D3[Pod 3: spring-gateway]
+
+    A --> B --> C --> D1
+    C --> D2
+    C --> D3
+```
+
+
+🔹 **Cách dùng:**  
+- Lưu nội dung trên vào file `architecture.md`  
+- Mở trên GitHub hoặc VS Code (cài extension *Markdown Preview Mermaid Support*)  
+→ Bạn sẽ thấy sơ đồ hiển thị trực quan đẹp mắt, có mũi tên và box rõ ràng.  
+
+Bạn muốn mình thêm **Ingress Controller thực tế (ví dụ nginx-ingress-controller)** vào sơ đồ này luôn không?
 
 🧠 Giải thích vai trò
 Thành phần	Vai trò
