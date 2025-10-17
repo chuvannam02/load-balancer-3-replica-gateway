@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: spring-gateway
+    labels:
+        app: spring-gateway
+spec:
+    replicas: 3
+    selector:
+        matchLabels:
+            app: spring-gateway
+    template:
+        metadata:
+            labels:
+                app: spring-gateway
+        spec:
+            containers:
+                - name: spring-gateway
+                  image: docker.io/betaplaptrinh/gateway:0.0.1
+                  ports:
+                      - containerPort: 8080
+                  readinessProbe:
+                      httpGet:
+                          path: /test
+                          port: 8080
+                      initialDelaySeconds: 5
+                      periodSeconds: 5
+                  livenessProbe:
+                      httpGet:
+                          path: /test
+                          port: 8080
+                      initialDelaySeconds: 10
+                      periodSeconds: 10
