@@ -19,15 +19,15 @@ spec:
                   image: docker.io/betaplaptrinh/gateway:0.0.1
                   ports:
                       - containerPort: 8080
-                  readinessProbe:
-                      httpGet:
-                          path: /test
-                          port: 8080
-                      initialDelaySeconds: 5
-                      periodSeconds: 5
-                  livenessProbe:
-                      httpGet:
-                          path: /test
-                          port: 8080
-                      initialDelaySeconds: 10
-                      periodSeconds: 10
+#                  readinessProbe:
+#                      httpGet:
+#                          path: /actuator/health
+#                          port: 8080
+#                      initialDelaySeconds: 5
+#                      periodSeconds: 5
+#                  livenessProbe:
+#                      httpGet:
+#                          path: /actuator/health
+#                          port: 8080
+#                      initialDelaySeconds: 10
+#                      periodSeconds: 10
