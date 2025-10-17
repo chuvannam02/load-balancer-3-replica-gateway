@@ -48,7 +48,7 @@ flowchart TD
     A --> B --> C --> D1
     C --> D2
     C --> D3
-
+```
 
 🔹 **Cách dùng:**  
 - Lưu nội dung trên vào file `architecture.md`  
