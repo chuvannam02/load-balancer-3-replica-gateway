@@ -236,3 +236,5 @@ Bạn sẽ nhận được:
 ```
 ✅ Gateway handled by pod: spring-gateway-xxxxx
 ```
+<img width="1542" height="536" alt="image" src="https://github.com/user-attachments/assets/4f698bd9-be8a-4d0a-beb3-de9dcef36d0e" />
+
