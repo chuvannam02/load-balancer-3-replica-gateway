@@ -1,0 +1,15 @@
+spring:
+    application:
+        name: test-load-balancer
+    main:
+        web-application-type: reactive
+---
+server:
+    port: 8080
+---
+management:
+    endpoints:
+        web:
+            exposure:
+                include: health
+
